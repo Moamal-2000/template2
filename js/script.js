@@ -257,7 +257,7 @@ if (headerSwitcherLocal !== null) {
   if (innerWidth < 992) {
     headerSwitcherElements.forEach((element) => {
       element.classList.remove("active");
-      element.style.cursor = 'auto'
+      element.style.cursor = "auto";
     });
   } else {
     if (headerSwitcherLocal == "yes") {
@@ -327,7 +327,7 @@ function changeBackground(switcher = true) {
       if (imageNumber === images.length) {
         imageNumber = 0;
       }
-    }, 1000);
+    }, 8000);
   }
 }
 changeBackground();
@@ -458,6 +458,6 @@ linksContainer.onclick = (e) => {
 //? Toggle menu [End]
 
 // Dynamic years in footer
-let dateInYears = document.querySelector('.date-in-years');
-dateInYears.innerHTML = new Date().getFullYear()
-dateInYears.style.userSelect = 'none'
+let dateInYears = document.querySelector(".date-in-years");
+dateInYears.innerHTML = new Date().getFullYear();
+dateInYears.style.userSelect = "none";
