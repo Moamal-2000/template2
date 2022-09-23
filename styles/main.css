@@ -1,6 +1,4 @@
-
-
-                                                /******** This Is My Second Project ********/
+/******** This Is My Second Project ********/
 
 
 * {
@@ -238,7 +236,42 @@ body {
   cursor: pointer;
   position: relative;
   user-select: none;
-  transition: transform 0.4s;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.nav-bullets .bullet::before {
+  content: '';
+  position: absolute;
+  left: 52%;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: var(--main-color);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.nav-bullets .bullet:hover::before {
+  background-color: var(--main-color);
+  width: 120%;
+  height: 120%;
 }
 
 .nav-bullets .bullet .tooltip {
@@ -709,6 +742,35 @@ header .toggle-menu span {
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 1001;
+  width: 1100px;
+}
+
+@media (max-width: 1200px) {
+  .popup-box {
+    width: 900px;
+  }
+}
+
+@media (max-width: 992px) {
+  .popup-box {
+    width: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup-box {
+    width: 500px;
+  }
+}
+
+@media (max-width: 481px) {
+  .popup-box {
+    width: 360px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .popup-box h3 {
@@ -716,6 +778,14 @@ header .toggle-menu span {
   text-align: center;
   margin: 0 0 20px;
   color: var(--main-color);
+}
+
+@media (max-width: 481px) {
+  .popup-box h3 {
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+  }
 }
 
 .popup-box img {
@@ -1207,11 +1277,27 @@ header .toggle-menu span {
 
 
 /*? Footer [Start] */
-.footer {
+footer {
   background-color: #161616;
   color: white;
   padding: 15px;
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer a,
+footer a:focus {
+  color: royalblue;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+footer a:hover {
+  color: rgb(40, 86, 224);
 }
 
 /*? Footer [End] */

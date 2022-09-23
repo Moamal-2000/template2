@@ -308,13 +308,13 @@ window.onload = () => {
 
 //? Landing Page {Change BackGround} [Start]
 let images = [
-  "../images/jason-goodman.jpg",
-  "../images/marc-kleen.jpg",
-  "../images/maxwell-nelson.jpg",
-  "../images/ratapan-anantawat.jpg",
-  "../images/rui-matayoshi.jpg",
-  "../images/viktor-forgacs.jpg",
-  "../images/zoltan-tasi.jpg",
+  "https://moamal-2000.github.io/template2/images/jason-goodman.jpg",
+  "https://moamal-2000.github.io/template2/images/marc-kleen.jpg",
+  "https://moamal-2000.github.io/template2/images/maxwell-nelson.jpg",
+  "https://moamal-2000.github.io/template2/images/ratapan-anantawat.jpg",
+  "https://moamal-2000.github.io/template2/images/rui-matayoshi.jpg",
+  "https://moamal-2000.github.io/template2/images/viktor-forgacs.jpg",
+  "https://moamal-2000.github.io/template2/images/zoltan-tasi.jpg",
 ];
 
 function changeBackground(switcher = true) {
@@ -327,7 +327,7 @@ function changeBackground(switcher = true) {
       if (imageNumber === images.length) {
         imageNumber = 0;
       }
-    }, 8000);
+    }, 1000);
   }
 }
 changeBackground();
@@ -456,3 +456,8 @@ linksContainer.onclick = (e) => {
   e.stopPropagation();
 };
 //? Toggle menu [End]
+
+// Dynamic years in footer
+let dateInYears = document.querySelector('.date-in-years');
+dateInYears.innerHTML = new Date().getFullYear()
+dateInYears.style.userSelect = 'none'
