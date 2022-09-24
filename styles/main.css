@@ -1281,9 +1281,23 @@ footer {
   background-color: #161616;
   color: white;
   padding: 15px;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  footer {
+    grid-template-columns: repeat(1, minmax(240px, 1fr));
+  }
 }
 
 footer a,
@@ -1294,6 +1308,10 @@ footer a:focus {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+}
+
+footer p {
+  margin: 0;
 }
 
 footer a:hover {
