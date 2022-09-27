@@ -309,12 +309,12 @@ window.onload = () => {
 //? Landing Page {Change BackGround} [Start]
 let images = [
   "https://moamal-2000.github.io/template2/images/jason-goodman.jpg",
-  "https://moamal-2000.github.io/template2/images/marc-kleen.jpg",
-  "https://moamal-2000.github.io/template2/images/maxwell-nelson.jpg",
-  "https://moamal-2000.github.io/template2/images/ratapan-anantawat.jpg",
-  "https://moamal-2000.github.io/template2/images/rui-matayoshi.jpg",
-  "https://moamal-2000.github.io/template2/images/viktor-forgacs.jpg",
-  "https://moamal-2000.github.io/template2/images/zoltan-tasi.jpg",
+  "https://img.freepik.com/free-photo/beautiful-shot-tower-bridge-london-uk_181624-41859.jpg?w=1060&t=st=1664290390~exp=1664290990~hmac=5b5e62b0c51c33e08aadac681b648998b79ce35d4d58570106245e3ce37e14cd",
+  "https://img.freepik.com/free-photo/beautiful-view-plaza-de-espana-seville-spain_181624-39542.jpg?w=1380&t=st=1664290962~exp=1664291562~hmac=47b2973ca9176a41e1fa299b68dd8d6b56ef465bf50aa03cac09804686f56b63",
+  "https://img.freepik.com/free-photo/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france_181624-33408.jpg?w=1060&t=st=1664290983~exp=1664291583~hmac=ba963829afd20c24ce3be876d86ac47ce83ae6b593308924b535f332d86c2e15",
+  "https://img.freepik.com/free-photo/modern-buildings_1127-2851.jpg?w=996&t=st=1664290794~exp=1664291394~hmac=53a05533275e3e73ce51aaaf7819c1e2a911e587d301ef926b7b7bb9a589cd57",
+  "images/french-village.jpg",
+  "images/corporate.jpg",
 ];
 
 function changeBackground(switcher = true) {
