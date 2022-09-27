@@ -327,7 +327,7 @@ function changeBackground(switcher = true) {
       if (imageNumber === images.length) {
         imageNumber = 0;
       }
-    }, 2000);
+    }, 8000);
   }
 }
 changeBackground();
