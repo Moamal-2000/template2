@@ -349,7 +349,7 @@ body {
 /*? Landing page [Start] */
 .landing-page {
   min-height: 100vh;
-  background-image: url('../images/jason-goodman.jpg');
+  background-image: url('../images/jason-goodman.webp');
   background-size: cover;
   position: relative;
 }
