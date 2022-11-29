@@ -392,6 +392,11 @@ ourGallery.forEach((img) => {
     closeButton.append("X");
     closeButton.className = "close-button";
     popupBox.append(closeButton);
+    
+    overlay.onclick = () => {
+      overlay.remove();
+      popupBox.remove();
+    };
   });
 });
 // remove popup image
