@@ -1,5 +1,5 @@
 "use strict";
-//* Declare Variables place [Start]
+
 // Get Elements
 const settingBox = document.querySelector(".settings-box"),
   triggerSettingBox = document.querySelector(".fa-gear"),
@@ -22,7 +22,13 @@ const settingBox = document.querySelector(".settings-box"),
   allBullets = document.querySelectorAll(".nav-bullets .bullet"),
   buttonMenu = document.querySelector(".links-container .toggle-menu"),
   linksContainer = document.querySelector(".links-container .links");
-// Other Types of Variables
+
+
+
+
+
+
+// Variables
 let mainColor = localStorage.getItem("pageColor"),
   counterStyles = 0,
   reset = false,
@@ -33,7 +39,11 @@ let mainColor = localStorage.getItem("pageColor"),
   backgroundSwitcher,
   backSwitcherKey = localStorage.getItem("backgroundSwitcherKey"),
   counterStylesLocalStorage = localStorage.getItem("counterStylesLocal");
-//* Declare Variables place [End]
+
+
+
+
+
 
 //! Settings Box [Start]
 //*1- Toggle Open Close Settings bar [Start]
