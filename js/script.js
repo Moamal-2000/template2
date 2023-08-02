@@ -21,7 +21,8 @@ const settingBox = document.querySelector(".settings-box"),
   allLinks = document.querySelectorAll(".links a"),
   allBullets = document.querySelectorAll(".nav-bullets .bullet"),
   buttonMenu = document.querySelector(".links-container .toggle-menu"),
-  linksContainer = document.querySelector(".links-container .links");
+  linksContainer = document.querySelector(".links-container .links"),
+  syncImgs = document.querySelectorAll('img:not([decoding="async"])');
 
 
 
@@ -476,3 +477,10 @@ linksContainer.onclick = (e) => {
 let dateInYears = document.querySelector(".date-in-years");
 dateInYears.innerHTML = new Date().getFullYear();
 dateInYears.style.userSelect = "none";
+
+// Set all images to async loading
+syncImgs.forEach((img) => {
+  img.setAttribute("decoding", "async");
+  img.setAttribute("width", "100%");
+  img.setAttribute("height", "100%");
+});
