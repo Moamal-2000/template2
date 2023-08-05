@@ -1,11 +1,13 @@
 * {
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
 }
 
 :root {
   --main-color: #ff9800;
+  --white: #fff;
 }
 
 body {
@@ -13,8 +15,7 @@ body {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   margin: auto;
 }
 
@@ -23,7 +24,7 @@ body {
   position: fixed;
   left: -200px;
   top: 0;
-  background-color: #fff;
+  background-color: var(--white);
   width: 200px;
   min-height: 100vh;
   z-index: 1000;
@@ -42,7 +43,7 @@ body {
   position: absolute;
   right: -35px;
   top: 100px;
-  background-color: #fff;
+  background-color: var(--white);
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -65,9 +66,9 @@ body {
   position: absolute;
   left: -44px;
   top: 0;
-  font-size: 8px;
+  font-size: 0.5rem;
   background-color: var(--main-color);
-  color: white;
+  color: var(--white);
   font-weight: 600;
   padding: 4px;
   cursor: pointer;
@@ -79,8 +80,7 @@ body {
   -o-transition: opacity 0.3s;
   -ms-transition: opacity 0.3s;
 }
-
-.settings-box .settings-container .styles-colors:hover {
+.settings-box .settings-container .styles-colorshover {
   opacity: 0.8;
 }
 
@@ -132,7 +132,6 @@ body {
   -o-transition: opacity 0.3s;
   -ms-transition: opacity 0.3s;
 }
-
 .settings-box .settings-container .option-box .colors-list li.active {
   opacity: 1;
 }
@@ -171,11 +170,11 @@ body {
 .settings-box .no {
   display: inline-block;
   background-color: var(--main-color);
-  color: white;
+  color: var(--white);
   width: 50px;
   margin-top: 10px;
   padding: 3px 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   opacity: 0.5;
   cursor: pointer;
@@ -209,12 +208,12 @@ body {
 
 .settings-box .reset-options {
   background-color: #F44336;
-  color: white;
+  color: var(--white);
   display: block;
   border: none;
   margin: 230px auto 20px;
   padding: 10px 20px;
-  font-size: 8px;
+  font-size: 0.5rem;
   font-weight: bold;
   cursor: pointer;
   opacity: 0.7;
@@ -227,7 +226,6 @@ body {
   -o-transition: box-shadow 0.3s;
   -ms-transition: box-shadow 0.3s;
 }
-
 .settings-box .reset-options:hover {
   opacity: 1;
   box-shadow: 0 0 3px #F44336, 0 0 6px #F44336, 0 0 9px #F44336, 0 0 12px #F44336;
@@ -261,6 +259,10 @@ body {
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   -ms-border-radius: 50%;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
 }
 
 .nav-bullets .bullet::before {
@@ -293,7 +295,7 @@ body {
 
 .nav-bullets .bullet .tooltip {
   background-color: var(--main-color);
-  color: #fff;
+  color: var(--white);
   width: 120px;
   padding: 8px 10px;
   position: absolute;
@@ -349,7 +351,7 @@ body {
 header {
   position: relative;
   z-index: 500;
-  color: white;
+  color: var(--white);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -364,7 +366,7 @@ header .logo {
   display: flex;
   align-items: center;
   width: 300px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -382,7 +384,7 @@ header .links-container {
 header .links {
   display: flex;
   list-style: none;
-  font-size: 15px;
+  font-size: 0.9375rem;
   justify-content: right;
 }
 
@@ -395,16 +397,14 @@ header .links li {
 }
 
 header .links li a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   -o-transition: color 0.3s;
   -ms-transition: color 0.3s;
 }
-
-header .links li a:hover,
-header .links li a.active {
+header .links li a:is(:hover, .active) {
   color: var(--main-color);
 }
 
@@ -413,7 +413,7 @@ header .links li a.active {
   left: 50%;
   top: 50%;
   z-index: 1;
-  color: white;
+  color: var(--white);
   text-align: center;
   width: 95%;
   -webkit-transform: translate(-50%, -50%);
@@ -430,7 +430,7 @@ header .links li a.active {
 
 @media (max-width: 575px) {
   .introduction-text h1 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 }
 .introduction-text h1 span {
@@ -439,13 +439,13 @@ header .links li a.active {
 
 .introduction-text p {
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0;
 }
 
 @media (max-width: 376px) {
   .introduction-text p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 header .toggle-menu {
@@ -478,7 +478,7 @@ header .toggle-menu:focus {
 header .toggle-menu span {
   display: block;
   width: 100%;
-  background-color: white;
+  background-color: var(--white);
   height: 4px;
   margin-bottom: 3px;
 }
@@ -488,7 +488,7 @@ header .toggle-menu span {
     display: none;
   }
   header .links.menu-active {
-    background-color: white;
+    background-color: var(--white);
     padding: 10px;
     display: block;
     position: absolute;
@@ -561,7 +561,7 @@ header .toggle-menu span {
 }
 .about-us .info-box h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--main-color);
   margin: 0 0 10px;
 }
@@ -611,14 +611,14 @@ header .toggle-menu span {
 
 .skills h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--main-color);
   margin: 0 0 50px;
   text-align: center;
 }
 
 .skills .skill-box {
-  background-color: #fff;
+  background-color: var(--white);
   display: flex;
   padding: 15px;
   margin-bottom: 15px;
@@ -629,9 +629,8 @@ header .toggle-menu span {
   -o-transition: transform 0.3s;
   -ms-transition: transform 0.3s;
 }
-
 .skills .skill-box:hover {
-  box-shadow: grey 5px 5px 0px 0px;
+  box-shadow: grey 5px 5px 0 0;
   -webkit-transform: translate(-4px, -4px);
   -moz-transform: translate(-4px, -4px);
   -o-transform: translate(-4px, -4px);
@@ -723,7 +722,7 @@ header .toggle-menu span {
 
 .gallery h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--main-color);
   margin: 0 0 50px;
   text-align: center;
@@ -751,7 +750,6 @@ header .toggle-menu span {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .gallery .images-box img:hover {
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);
@@ -773,7 +771,7 @@ header .toggle-menu span {
   position: fixed;
   left: 50%;
   top: 50%;
-  background-color: white;
+  background-color: var(--white);
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 1001;
@@ -817,7 +815,7 @@ header .toggle-menu span {
 
 @media (max-width: 481px) {
   .popup-box h3 {
-    background-color: white;
+    background-color: var(--white);
     padding: 10px;
     margin: 0;
   }
@@ -834,11 +832,11 @@ header .toggle-menu span {
   right: -20px;
   width: 40px;
   height: 40px;
-  background-color: white;
+  background-color: var(--white);
   color: #ff2020;
   line-height: 40px;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
   font-weight: bold;
   -webkit-user-select: none;
@@ -853,10 +851,9 @@ header .toggle-menu span {
   -o-transition: color 0.3s, background-color 0.3s;
   -ms-transition: color 0.3s, background-color 0.3s;
 }
-
 .close-button:hover {
   background-color: #ff2020;
-  color: white;
+  color: var(--white);
 }
 
 /*! Gallery [End] */
@@ -887,7 +884,7 @@ header .toggle-menu span {
   margin: 20px auto;
   width: 50px;
   background-color: var(--main-color);
-  color: white;
+  color: var(--white);
   position: relative;
   z-index: 2;
   text-align: center;
@@ -939,7 +936,7 @@ header .toggle-menu span {
   top: 20px;
   width: 14px;
   height: 14px;
-  background-color: #fff;
+  background-color: var(--white);
   border: 3px solid var(--main-color);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -955,7 +952,7 @@ header .toggle-menu span {
 }
 .timeline .timeline-content .content {
   padding: 20px;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .timeline .timeline-content .content h3 {
@@ -981,7 +978,7 @@ header .toggle-menu span {
   top: 20px;
   border-style: solid;
   border-width: 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent var(--white);
   height: 0;
   width: 0;
 }
@@ -1013,7 +1010,7 @@ header .toggle-menu span {
 
 .features h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--main-color);
   margin: 0 0 60px;
   text-align: center;
@@ -1046,7 +1043,7 @@ header .toggle-menu span {
 }
 
 .features .feed-box h3 {
-  font-size: 22px;
+  font-size: 1.375rem;
   margin: 3px 0 40px;
   position: relative;
 }
@@ -1108,8 +1105,8 @@ header .toggle-menu span {
 
 .testimonials h2 {
   font-weight: bold;
-  font-size: 30px;
-  color: white;
+  font-size: 1.875rem;
+  color: var(--white);
   margin: 0 0 30px;
   text-align: left;
   position: relative;
@@ -1124,9 +1121,9 @@ header .toggle-menu span {
   z-index: 2;
   width: 32.6666666667%;
   float: left;
-  background-color: white;
+  background-color: var(--white);
   padding: 20px;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 @media (max-width: 766px) {
@@ -1142,7 +1139,7 @@ header .toggle-menu span {
 .testimonials .ts-box > p {
   margin: 0 0 20px;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #4f4f4f;
   font-style: italic;
 }
@@ -1170,7 +1167,7 @@ header .toggle-menu span {
 
 @media (max-width: 992px) {
   .testimonials .ts-box .person-info h3 {
-    font-size: 16px;
+    font-size: 1rem;
     height: 70px;
   }
 }
@@ -1211,7 +1208,7 @@ header .toggle-menu span {
 
 .contact h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--main-color);
   margin: 0 0 60px;
   text-align: center;
@@ -1271,7 +1268,7 @@ header .toggle-menu span {
   width: 100%;
   border-color: transparent;
   background-color: var(--main-color);
-  color: white;
+  color: var(--white);
   cursor: pointer;
   letter-spacing: 0.4px;
   -webkit-transition: all 0.3s;
@@ -1279,7 +1276,6 @@ header .toggle-menu span {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
 }
-
 .contact form input[type=submit]:hover {
   opacity: 0.9;
 }
@@ -1310,7 +1306,7 @@ header .toggle-menu span {
 /*? Footer [Start] */
 footer {
   background-color: #161616;
-  color: white;
+  color: var(--white);
   padding: 15px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
